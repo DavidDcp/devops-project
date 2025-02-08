@@ -1,0 +1,22 @@
+#Comprueba 3 contendedores
+
+version: '3.8'
+
+services:
+  api:
+    build: ./api
+    container_name: flask_api
+    restart: always
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=example
+      - DB_NAME=test_db
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - app_network
+    volumes:
+      - ./api:/app
