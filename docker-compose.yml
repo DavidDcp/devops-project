@@ -1,4 +1,9 @@
 #Comprueba 3 contendedores
+#docker-compose.yml: elabora un archivo docker-compose.yml que configure y gestione tres contenedores:
+
+#API de Flask: construida a partir del Dockerfile proporcionado.
+#NGINX: servidor que gestiona las solicitudes entrantes hacia la API de Flask.
+#MySQL: base de datos para almacenar el mensaje "Hola mundo".
 
 version: '3.8'
 
